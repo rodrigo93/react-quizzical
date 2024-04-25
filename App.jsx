@@ -1,9 +1,13 @@
 import React from "react";
+
+// Components
 import Quizzical from "./components/Quizzical";
+import Questions from "./components/Questions";
 
 export default function App () {
   const steps = ["initial", "question", "result"]
   const [currentStep, setCurrentStep] = React.useState(steps[0])
+  console.log("currentStep", currentStep) // DELETE this comment
 
   function nextStep() {
     const currentIndex = steps.indexOf(currentStep)
@@ -13,7 +17,8 @@ export default function App () {
 
   return (
     <div className="app--container">
-      {currentStep === "initial" && <Quizzical handleClick={nextStep} />}
+      {currentStep === "initial" && <Quizzical nextStep={nextStep} />}
+      {currentStep === "question" && <Questions nextStep={nextStep} />}
     </div>
   )
 }

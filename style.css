@@ -116,3 +116,18 @@ button {
         margin-top: 1rem;
     }
 }
+
+/* Questions */
+
+.questions--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    > button {
+        margin-top: 1rem;
+    }
+}
