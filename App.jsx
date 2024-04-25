@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 // Components
 import Quizzical from "./components/Quizzical";
@@ -6,7 +6,7 @@ import Questions from "./components/Questions";
 
 export default function App () {
   const steps = ["initial", "question", "result"]
-  const [currentStep, setCurrentStep] = React.useState(steps[0])
+  const [currentStep, setCurrentStep] = useState(steps[0])
   console.log("currentStep", currentStep) // DELETE this comment
 
   function nextStep() {
