@@ -1,15 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 
-export default function Question({question: {id, answers, question}}) {
-  const [selected, setSelected] = useState(null)
-
-  function handleSelect(answer) {
-    setSelected(answer)
-  }
-
+export default function Question({question: {id, answers, question, userAnswer}, setAnswer}) {
   function isSelected(option) {
-    console.log("selected?", selected === option)
-    return selected === option
+    return userAnswer === option
   }
 
   return (
@@ -17,7 +10,7 @@ export default function Question({question: {id, answers, question}}) {
       <h2>{question}</h2>
       <div className="question--answers">
         {answers.map((answer, index) => (
-          <button className={isSelected(answer) ? "selected" : ""} key={index} onClick={() => handleSelect(answer)}>
+          <button className={isSelected(answer) ? "selected" : ""} key={index} onClick={() => setAnswer(id, answer)}>
             {answer}
           </button>
         ))}
