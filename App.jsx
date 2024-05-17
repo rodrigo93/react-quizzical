@@ -17,7 +17,7 @@ export default function App () {
   return (
     <div className="app--container">
       {currentStep === "initial" && <Quizzical nextStep={nextStep} />}
-      {["question", "result"].includes(currentStep) && <Questions currentStep nextStep={nextStep} />}
+      {["question", "result"].includes(currentStep) && <Questions currentStep={currentStep} nextStep={nextStep} />}
     </div>
   )
 }
