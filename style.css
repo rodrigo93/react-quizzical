@@ -129,6 +129,12 @@ button {
 
     > button {
         margin-top: 2rem;
+
+        &:disabled {
+            background-color: gainsboro;
+            color: white;
+            cursor: not-allowed;
+        }
     }
 }
 
@@ -159,13 +165,26 @@ button {
 
     padding: 1rem;
 
-    > .selected {
-        background-color: #D6DBF5;
-        border: 0;
+    > .correct {
+        background-color: #94D7A2;
+    }
+
+    > .disabled {
+        color: #4D5B9E;
+        opacity: 50%;
+
+        border: #4D5B9E solid 1px;
+        background-color: transparent;
     }
 
     > .incorrect {
+        opacity: 50%;
         background-color: #F8BCBC;
+    }
+
+    > .selected {
+        background-color: #D6DBF5;
+        border: 0;
     }
 
     > button {
