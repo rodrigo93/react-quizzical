@@ -1,5 +1,6 @@
 {
   "name": "react-quizzical",
+  "homepage": "https://rodrigo93.github.io/react-quizzical/",
   "dependencies": {
     "he": "^1.2.0",
     "react": "17.0.2",
@@ -7,12 +8,15 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "*",
+    "gh-pages": "^6.1.1",
     "vite": "^5.2.9"
   },
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
