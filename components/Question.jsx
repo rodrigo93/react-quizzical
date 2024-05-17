@@ -6,12 +6,17 @@ export default function Question({question: {id, answers, question}}) {
     setSelected(answer)
   }
 
+  function isSelected(option) {
+    console.log("selected?", selected === option)
+    return selected === option
+  }
+
   return (
     <div className="question--container" key={id}>
       <h2>{question}</h2>
       <div className="question--answers">
         {answers.map((answer, index) => (
-          <button key={index} onClick={() => handleSelect(answer)}>
+          <button className={isSelected(answer) ? "selected" : ""} key={index} onClick={() => handleSelect(answer)}>
             {answer}
           </button>
         ))}

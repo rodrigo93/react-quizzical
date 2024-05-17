@@ -41,27 +41,27 @@ table {
 body {
     background-color: #F5F7FB;
 
-    ::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 130px;
-        background-color: #FFFAD1;
-        border-radius: 0 0 0 100%;
-    }
+    /*::before {*/
+    /*    content: "";*/
+    /*    position: absolute;*/
+    /*    top: 0;*/
+    /*    right: 0;*/
+    /*    width: 200px;*/
+    /*    height: 130px;*/
+    /*    background-color: #FFFAD1;*/
+    /*    border-radius: 0 0 0 100%;*/
+    /*}*/
 
-    ::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 230px;
-        height: 100px;
-        background-color: #DEEBF8;
-        border-radius: 0 100% 0 0;
-    }
+    /*::after {*/
+    /*    content: "";*/
+    /*    position: absolute;*/
+    /*    bottom: 0;*/
+    /*    left: 0;*/
+    /*    width: 230px;*/
+    /*    height: 100px;*/
+    /*    background-color: #DEEBF8;*/
+    /*    border-radius: 0 100% 0 0;*/
+    /*}*/
 }
 
 h1 {
@@ -126,8 +126,55 @@ button {
     align-items: center;
 
     padding: 1rem;
+}
+
+/* Question Component */
+
+.question--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.5rem;
+
+    border-bottom: #D6DBF5 solid 1px;
+
+    > h2 {
+        color: #293264;
+        font-size: 1.4rem;
+    }
+}
+
+.question--answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 1rem;
+
+    > .selected {
+        background-color: #D6DBF5;
+    }
+
+    > .incorrect {
+        background-color: #F8BCBC;
+    }
 
     > button {
-        margin-top: 1rem;
+        color: #293264;
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+
+        background-color: transparent;
+        border: #4D5B9E solid 2px;
+
+        padding: 0;
+        height: 2rem;
+        width: 15rem;
+        text-align: center;
+        display: inline-block;
     }
 }
