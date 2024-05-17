@@ -39,29 +39,34 @@ table {
 /* End of Normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 body {
+    display: flex;
+    align-items: center;
+
     background-color: #F5F7FB;
 
-    /*::before {*/
-    /*    content: "";*/
-    /*    position: absolute;*/
-    /*    top: 0;*/
-    /*    right: 0;*/
-    /*    width: 200px;*/
-    /*    height: 130px;*/
-    /*    background-color: #FFFAD1;*/
-    /*    border-radius: 0 0 0 100%;*/
-    /*}*/
+    ::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 130px;
+        background-color: #FFFAD1;
+        border-radius: 0 0 0 100%;
+        z-index: -1;
+    }
 
-    /*::after {*/
-    /*    content: "";*/
-    /*    position: absolute;*/
-    /*    bottom: 0;*/
-    /*    left: 0;*/
-    /*    width: 230px;*/
-    /*    height: 100px;*/
-    /*    background-color: #DEEBF8;*/
-    /*    border-radius: 0 100% 0 0;*/
-    /*}*/
+    ::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 230px;
+        height: 100px;
+        background-color: #DEEBF8;
+        border-radius: 0 100% 0 0;
+        z-index: -1;
+    }
 }
 
 h1 {
