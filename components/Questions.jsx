@@ -74,9 +74,6 @@ export default function Questions({ currentStep, nextStep }) {
     return questions.every(question => question.userAnswer !== null)
   }
 
-  // Remove this console.log
-  console.log("Current Step: ", currentStep)
-
   return (
     <>
       {questions.length > 0 && (

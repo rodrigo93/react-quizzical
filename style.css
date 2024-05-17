@@ -138,6 +138,21 @@ button {
     }
 }
 
+.questions--score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    gap: 20px;
+
+    > span {
+        color: #293264;
+        font-weight: bold;
+    }
+}
+
 /* Question Component */
 
 .question--container {
