@@ -7,7 +7,6 @@ import Questions from "./components/Questions";
 export default function App () {
   const steps = ["initial", "question", "result"]
   const [currentStep, setCurrentStep] = useState(steps[0])
-  console.log("currentStep", currentStep) // DELETE this comment
 
   function nextStep() {
     const currentIndex = steps.indexOf(currentStep)
@@ -18,7 +17,7 @@ export default function App () {
   return (
     <div className="app--container">
       {currentStep === "initial" && <Quizzical nextStep={nextStep} />}
-      {currentStep === "question" && <Questions nextStep={nextStep} />}
+      {["question", "result"].includes(currentStep) && <Questions currentStep nextStep={nextStep} />}
     </div>
   )
 }
