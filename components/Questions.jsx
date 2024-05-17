@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from "react";
+import he from "he";
+
 import Question from "./Question";
 
 function parsedQuestions(questions) {
   return questions.map((question, index) => {
     return {
       id: index,
-      question: question.question,
+      question: he.decode(question.question),
       answers: [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5),
       correctAnswer: question.correct_answer,
       incorrectAnswers: question.incorrect_answers,

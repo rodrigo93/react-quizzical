@@ -126,6 +126,10 @@ button {
     align-items: center;
 
     padding: 1rem;
+
+    > button {
+        margin-top: 2rem;
+    }
 }
 
 /* Question Component */
@@ -157,6 +161,7 @@ button {
 
     > .selected {
         background-color: #D6DBF5;
+        border: 0;
     }
 
     > .incorrect {
